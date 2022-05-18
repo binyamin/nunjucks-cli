@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // ":" //#;exec /usr/bin/env node --input-type=module - "$@" < "$0"
 
 const {program} = require("commander");

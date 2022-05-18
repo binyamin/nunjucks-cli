@@ -1,7 +1,27 @@
+import { inspect } from "node:util";
 import { date } from "./date-filter.js";
 
 export const filters = {
     date,
+    log(content, { depth=Infinity, compact=true }) {
+        console.error(inspect(content, {
+            depth,
+            compact,
+            colors: true
+        }))
+    },
+    // Turn a number into an ordinal, such as 1 => 1st
+    ordinal: function(n=0) {
+        let s = n.toString();
+        if (s.endsWith("1")) return s + "st";
+        else if (s.endsWith("2")) return s + "nd";
+        else if (s.endsWith("3")) return s + "rd";
+        else return s + "th";
+    },
+    // jinja stuff
+    attr(obj, name) {
+        return obj[name];
+    }
 }
 
 export const functions = {
