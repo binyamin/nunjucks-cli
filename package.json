@@ -1,12 +1,16 @@
 {
   "name": "@binyamin/njk",
+  "private": true,
   "version": "0.1.0",
   "description": "A cli for nunjucks",
   "bin": {
     "njk": "index.cjs"
   },
-  "exports": "./app.js",
+  "main": "app.js",
   "type": "module",
+  "engines": {
+    "node": ">=14.16"
+  },
   "keywords": [],
   "author": "Binyamin Aron Green (https://binyam.in/)",
   "license": "MIT",
@@ -16,15 +20,14 @@
     "test": "ava"
   },
   "dependencies": {
-    "commander": "^9.0.0",
+    "commander": "^9.2.0",
     "js-yaml": "^4.1.0",
     "nunjucks": "^3.2.3"
   },
   "devDependencies": {
-    "@types/node": "^17.0.21",
-    "ava": "^4.0.1",
-    "esbuild": "^0.14.23",
+    "ava": "^4.2.0",
+    "esbuild": "^0.14.39",
     "mock-fs": "^5.1.2",
-    "pkg": "^5.5.2"
+    "pkg": "^5.7.0"
   }
 }
