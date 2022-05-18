@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   ava: ^4.2.0
+  camelcase: ^6.3.0
   commander: ^9.2.0
   esbuild: ^0.14.39
   js-yaml: ^4.1.0
@@ -10,6 +11,7 @@ specifiers:
   pkg: ^5.7.0
 
 dependencies:
+  camelcase: 6.3.0
   commander: 9.2.0
   js-yaml: 4.1.0
   nunjucks: 3.2.3
@@ -298,6 +300,11 @@ packages:
     resolution: {integrity: sha512-y3jRROutgpKdz5vzEhWM34TidDU8vkJppF8dszITeb1PQmSqV3DTxyV8G/lyO/DNvtE1YTedehmw9MPZsCBHxQ==}
     engines: {node: '>=12.20'}
     dev: true
+
+  /camelcase/6.3.0:
+    resolution: {integrity: sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==}
+    engines: {node: '>=10'}
+    dev: false
 
   /cbor/8.1.0:
     resolution: {integrity: sha512-DwGjNW9omn6EwP70aXsn7FQJx5kO12tX0bZkaTjzdVFM6/7nhA4t0EENocKGx6D2Bch9PE2KzCUf5SceBdeijg==}
