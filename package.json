@@ -20,9 +20,9 @@
     "test": "ava"
   },
   "dependencies": {
-    "@binyamin/njk-plugins": "link:plugins",
     "camelcase": "^6.3.0",
     "commander": "^9.2.0",
+    "dayjs": "^1.11.2",
     "js-yaml": "^4.1.0",
     "nunjucks": "^3.2.3"
   },
