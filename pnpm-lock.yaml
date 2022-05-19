@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@binyamin/njk-plugins': link:plugins
   ava: ^4.2.0
   camelcase: ^6.3.0
   commander: ^9.2.0
@@ -11,6 +12,7 @@ specifiers:
   pkg: ^5.7.0
 
 dependencies:
+  '@binyamin/njk-plugins': link:plugins
   camelcase: 6.3.0
   commander: 9.2.0
   js-yaml: 4.1.0
