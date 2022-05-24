@@ -10,10 +10,24 @@ dayjs.extend(advancedFormat);
 
 dayjs.tz.setDefault("America/New_York");
 
-export function date(timestamp, format, kwargs={}) {
-    if(timestamp === 'now' | !timestamp) {
+/**
+ *
+ * @type {import("../lib/types").Filter}
+ *
+ * @param {string} timestamp
+ * @param {['rfc' | 'iso' | 'string']} args
+ * @param {object} kwargs
+ * @param {'rfc' | 'iso' | 'string'} [kwargs.format]
+ * @param {string} [kwargs.timezone]
+ * @param {string} [kwargs.tz] Alias for `timezone`
+ *
+ * @returns {string}
+ */
+export function date(timestamp, [format], kwargs) {
+    if(timestamp === 'now' || !timestamp) {
         timestamp = new Date();
     }
+    if (kwargs.format) format = kwargs.format;
 
     let dt = dayjs(timestamp);
 
