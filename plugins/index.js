@@ -3,7 +3,7 @@ import { date } from "./date-filter.js";
 
 export const filters = {
     date,
-    /** @type {import("../lib/types").Filter} */
+    /** @type {import("../lib/nunjucks").Filter} */
     log(content, args, kwargs) {
         kwargs.depth ??= args[0] ?? 2;
         kwargs.compact ??= args[1] ?? false;

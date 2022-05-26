@@ -4,11 +4,11 @@ import {createEnv} from "./lib/nunjucks.js";
 import { getPaths } from './lib/paths.js';
 import { writeFile } from './lib/utils.js'
 
+export { Nunjucks } from './lib/nunjucks.js'
+
 /**
- * @param {string} input input file/directory
- * @param {string} output output file/directory
- * @param {{ data: string[] }} options
- * @returns {Promise<void>}
+ *
+ * @type {import('./app')['run']}
  */
 export async function run(input, output, options = {}) {
     const pathConfig = await getPaths(input, output);

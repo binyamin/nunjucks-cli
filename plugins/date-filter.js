@@ -12,7 +12,7 @@ dayjs.tz.setDefault("America/New_York");
 
 /**
  *
- * @type {import("../lib/types").Filter}
+ * @type {import("../lib/nunjucks").Filter}
  *
  * @param {string} timestamp
  * @param {['rfc' | 'iso' | 'string']} args
