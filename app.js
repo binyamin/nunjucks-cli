@@ -7,17 +7,17 @@ import { writeFile } from './lib/utils.js'
 /**
  * @param {string} input input file/directory
  * @param {string} output output file/directory
- * @param {{ data: string[] }} options 
+ * @param {{ data: string[] }} options
  * @returns {Promise<void>}
  */
-export async function run(input, output, options = {}) {   
+export async function run(input, output, options = {}) {
     const pathConfig = await getPaths(input, output);
     const env = await createEnv({ paths: pathConfig, dataFiles: options.data || [] });
-    
+
     for(const templatePath of pathConfig.files) {
         // [1] File contents
         const contents = env.render(templatePath);
-        
+
 
         // [2] Output path
         // If `pathConfig.outputFile` is defined, use it; else, use `templatePath`
@@ -25,8 +25,8 @@ export async function run(input, output, options = {}) {
 
         // Convert `outputPath` to an absolute path, pointing to the output directory
         outputPath = path.resolve(pathConfig.dest, outputPath);
-        
-        
+
+
         // [3] Write the file
         await writeFile(outputPath, contents, 'utf-8');
     }

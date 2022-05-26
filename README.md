@@ -1,6 +1,6 @@
 # Nunjucks CLI
 
-A small CLI for Nunjucks 
+A small CLI for Nunjucks
 
 [![Lint and Test](https://github.com/binyamin/nunjucks-cli/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/binyamin/nunjucks-cli/actions/workflows/main.yml)
 
