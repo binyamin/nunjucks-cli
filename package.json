@@ -6,8 +6,9 @@
   "bin": {
     "njk": "index.cjs"
   },
-  "main": "app.js",
   "type": "module",
+  "main": "app.js",
+	"types": "./app.d.ts",
   "engines": {
     "node": ">=14.16"
   },
