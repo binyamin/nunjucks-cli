@@ -19,5 +19,10 @@ declare interface Options {
  * @param output output file or directory
  * @param options
  */
-export function run(input: string, output: string, options?: Options): Promise<void>;
-export { Nunjucks };
+export function run(
+	input: string,
+	output: string,
+	options?: Options
+): Promise<void>;
+
+export { Nunjucks } from './lib/nunjucks.js';

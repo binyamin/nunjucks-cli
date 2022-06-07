@@ -1,10 +1,10 @@
-import nunjucks from "nunjucks";
-import { PathConfig } from "./paths.js";
+import nunjucks from 'nunjucks';
+import { PathConfig } from './paths.js';
 
 export type Filter = (
-    target: any,
-    args: any[],
-    kwargs: Record<string, any>,
+	target: any,
+	args: any[],
+	kwargs: Record<string, any>,
 ) => any | Promise<any>;
 
 /**
@@ -16,7 +16,6 @@ export type Filter = (
  * @see {@link nunjucks.Environment `nunjucks.Environment`}
  */
 export class Nunjucks extends nunjucks.Environment {
-
 	/**
 	 *
 	 * @param dirs The location(s) of the nunjucks files
@@ -45,8 +44,8 @@ export class Nunjucks extends nunjucks.Environment {
 }
 
 declare interface Options {
-	paths: PathConfig,
-	dataFiles?: string[]
+	paths: PathConfig;
+	dataFiles?: string[];
 }
 
 /**

@@ -1,18 +1,18 @@
-import dayjs from "dayjs";
+import dayjs from 'dayjs';
 
-import advancedFormat from "dayjs/plugin/advancedFormat.js";
-import utc from "dayjs/plugin/utc.js";
-import timezone from "dayjs/plugin/timezone.js";
+import advancedFormat from 'dayjs/plugin/advancedFormat.js';
+import utc from 'dayjs/plugin/utc.js';
+import timezone from 'dayjs/plugin/timezone.js';
 
 dayjs.extend(utc);
-dayjs.extend(timezone)
+dayjs.extend(timezone);
 dayjs.extend(advancedFormat);
 
-dayjs.tz.setDefault("America/New_York");
+dayjs.tz.setDefault('America/New_York');
 
 /**
  *
- * @type {import("../lib/nunjucks").Filter}
+ * @type {import('../lib/nunjucks').Filter}
  *
  * @param {string} timestamp
  * @param {['rfc' | 'iso' | 'string']} args
@@ -24,21 +24,28 @@ dayjs.tz.setDefault("America/New_York");
  * @returns {string}
  */
 export function date(timestamp, [format], kwargs) {
-    if(timestamp === 'now' || !timestamp) {
-        timestamp = new Date();
-    }
-    if (kwargs.format) format = kwargs.format;
+	if (timestamp === 'now' || !timestamp) {
+		timestamp = new Date();
+	}
 
-    let dt = dayjs(timestamp);
+	if (kwargs.format) {
+		format = kwargs.format;
+	}
 
-    const tz = kwargs.tz || kwargs.timezone;
-    if(tz) dt = dt.tz(tz);
+	let dt = dayjs(timestamp);
 
-    if(format === 'rfc' || format === 'string') {
-        return dt.toString();
-    } else if (format === 'iso') {
-        return dt.toISOString();
-    } else {
-        return dt.format(format);
-    }
+	const tz = kwargs.tz || kwargs.timezone;
+	if (tz) {
+		dt = dt.tz(tz);
+	}
+
+	switch (format) {
+		case 'rfc':
+		case 'string':
+			return dt.toString();
+		case 'iso':
+			return dt.toISOString();
+		default:
+			return dt.format(format);
+	}
 }
