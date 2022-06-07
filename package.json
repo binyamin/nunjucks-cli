@@ -35,11 +35,6 @@
     "pkg": "^5.7.0",
     "xo": "github:xojs/xo#3a4c9c9"
   },
-	"xo": {
-		"rules": {
-			"max-len": [ "error" ]
-		}
-	},
   "pnpm": {
     "overrides": {
       "eslint-plugin-n": "^15.2.1"
