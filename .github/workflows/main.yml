@@ -11,12 +11,12 @@ jobs:
 
     # Skip if commit contains "skip-ci"
     if: "!contains(github.event.head_commit.message, 'skip-ci')"
-  
+
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [16.x, 18.x]
 
     steps:
     - uses: actions/checkout@v3
@@ -28,6 +28,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
-    - run: pnpm install -r
+    - run: pnpm install
     - run: pnpm run --if-present lint
     - run: pnpm test

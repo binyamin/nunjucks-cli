@@ -8,9 +8,9 @@
   },
   "type": "module",
   "main": "app.js",
-	"types": "./app.d.ts",
+  "types": "./app.d.ts",
   "engines": {
-    "node": ">=14.16"
+    "node": ">=16.8"
   },
   "keywords": [],
   "author": "Binyamin Aron Green (https://binyam.in/)",
