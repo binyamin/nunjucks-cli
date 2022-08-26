@@ -15,7 +15,7 @@ and this project tries to adhere to
 	**Security** in case of vulnerabilities.
 -->
 
-## Unreleased
+## [0.1.1] - 2022-08-26
 
 ### Fixed
 - Detect color-support within the **log** filter ([`52a93a9`](https://github.com/binyamin/nunjucks-cli/commit/52a93a9))
@@ -32,3 +32,4 @@ and this project tries to adhere to
 - Add some helper filters and functions
 
 [0.1.0]: https://github.com/binyamin/nunjucks-cli/releases/tag/v0.1.0
+[0.1.1]: https://github.com/binyamin/nunjucks-cli/releases/tag/v0.1.1
