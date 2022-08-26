@@ -1,4 +1,5 @@
 import { inspect } from 'node:util';
+import process from 'node:process';
 import { date } from './date-filter.js';
 
 export const filters = {
@@ -8,10 +9,10 @@ export const filters = {
 		kwargs.depth ??= args[0] ?? 2;
 		kwargs.compact ??= args[1] ?? false;
 
-		console.error(inspect(content, {
+		console.error(inspect(content?.valueOf() ?? content, {
 			depth: kwargs.depth,
 			compact: kwargs.compact,
-			colors: true,
+			colors: process.stderr.hasColors(),
 		}));
 	},
 	/**
@@ -51,7 +52,7 @@ export const functions = {
 	class(...groups) {
 		// Combine arrays of classes as `one two | three`
 		return groups.flatMap(g => {
-			if (['symbol', 'object'].includes(typeof g)) {
+			if (Array.isArray(g)) {
 				const gg = g.filter(Boolean);
 				return gg.length > 0 ? gg.join(' ') : [];
 			}
