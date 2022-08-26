@@ -21,8 +21,10 @@ test.before(() => {
 		data: {
 			'vars.json': JSON.stringify({ name: 'Bob' }),
 			'vars.yaml': yaml.dump({ name: 'Bob' }),
+			'kebab-case.json': JSON.stringify({ name: 'Bob' }),
 		},
 		'with-data.njk': 'Hello {{ vars.name }}!',
+		'with-data-kebabcase.njk': 'Hello {{ kebabCase.name }}!',
 		'with-plugins.njk':
 			'Today is {{ "2022-01-01" | date("MMMM Do, YYYY") }}',
 		'index-root.njk': '{{ range(5) | join(",") }}',
@@ -85,6 +87,18 @@ test('"data" is a yaml file', async t => {
 	const contents = await readFile('out/with-data.html', 'utf8');
 	t.is(contents, 'Hello Bob!');
 });
+
+test(
+	'"data" file-names using kebab-case are transformed to camel-case',
+	async t => {
+		await runApp('with-data-kebabcase.njk', 'out', {
+			data: ['data/kebab-case.json'],
+		});
+
+		const contents = await readFile('out/with-data-kebabcase.html', 'utf8');
+		t.is(contents, 'Hello Bob!');
+	},
+);
 
 test('internal plugins work', async t => {
 	await runApp('with-plugins.njk', 'out');
