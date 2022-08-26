@@ -1,16 +1,16 @@
 {
-  "name": "@binyamin/njk",
-  "version": "0.1.0",
-  "description": "A small cli for nunjucks",
-  "bin": {
-    "njk": "index.cjs"
-  },
-  "type": "module",
-  "main": "app.js",
-  "types": "./app.d.ts",
-  "engines": {
-    "node": ">=16.8"
-  },
+	"name": "@binyamin/njk",
+	"version": "0.1.0",
+	"description": "A small cli for nunjucks",
+	"bin": {
+		"njk": "index.cjs"
+	},
+	"type": "module",
+	"main": "app.js",
+	"types": "./app.d.ts",
+	"engines": {
+		"node": ">=16.8"
+	},
 	"publishConfig": {
 		"registry": "https://npm.pkg.github.com"
 	},
@@ -18,37 +18,34 @@
 		"type": "git",
 		"url": "https://github.com/binyamin/nunjucks-cli"
 	},
-  "keywords": [],
-  "author": "Binyamin Aron Green (https://binyam.in/)",
-  "license": "MIT",
-  "scripts": {
-    "prebuild": "esbuild index.cjs --bundle --minify --outdir=dist --platform=node",
-    "build": "pkg dist/index.js -o dist/njk",
-    "lint": "xo",
-    "test": "ava"
-  },
-  "dependencies": {
-    "camelcase": "^6.3.0",
-    "commander": "^9.2.0",
-    "dayjs": "^1.11.2",
-    "js-yaml": "^4.1.0",
-    "nunjucks": "^3.2.3"
-  },
-  "devDependencies": {
-    "ava": "^4.2.0",
-    "esbuild": "^0.14.39",
-    "mock-fs": "^5.1.2",
-    "pkg": "^5.7.0",
-    "xo": "github:xojs/xo#3a4c9c9"
-  },
-  "pnpm": {
-    "overrides": {
-      "eslint-plugin-n": "^15.2.1"
-    },
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "webpack"
-      ]
-    }
-  }
+	"keywords": [],
+	"author": "Binyamin Aron Green (https://binyam.in/)",
+	"license": "MIT",
+	"scripts": {
+		"prebuild": "esbuild index.cjs --bundle --minify --outdir=dist --platform=node",
+		"build": "pkg dist/index.js -o dist/njk",
+		"lint": "xo",
+		"test": "ava"
+	},
+	"dependencies": {
+		"camelcase": "^7.0.0",
+		"commander": "^9.4.0",
+		"dayjs": "^1.11.5",
+		"js-yaml": "^4.1.0",
+		"nunjucks": "^3.2.3"
+	},
+	"devDependencies": {
+		"ava": "^4.3.3",
+		"esbuild": "^0.15.5",
+		"mock-fs": "^5.1.4",
+		"pkg": "^5.8.0",
+		"xo": "^0.52.2"
+	},
+	"pnpm": {
+		"peerDependencyRules": {
+			"ignoreMissing": [
+				"webpack"
+			]
+		}
+	}
 }
