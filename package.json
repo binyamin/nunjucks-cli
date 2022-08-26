@@ -22,8 +22,8 @@
 	"author": "Binyamin Aron Green (https://binyam.in/)",
 	"license": "MIT",
 	"scripts": {
-		"prebuild": "esbuild index.cjs --bundle --minify --outdir=dist --platform=node",
-		"build": "pkg dist/index.js -o dist/njk",
+		"prebuild": "esbuild index.cjs --bundle --minify --outdir=dist --tree-shaking --platform=node",
+		"build": "pkg dist/index.js -o dist/njk -C brotli",
 		"lint": "xo",
 		"test": "ava"
 	},
