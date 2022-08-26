@@ -1,5 +1,5 @@
 import nunjucks from 'nunjucks';
-import { PathConfig } from './paths.js';
+import type { PathConfig } from './paths.js';
 
 export type Filter = (
 	target: any,

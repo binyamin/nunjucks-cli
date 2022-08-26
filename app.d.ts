@@ -1,4 +1,4 @@
-import { Nunjucks } from './lib/nunjucks.js';
+import type { Nunjucks } from './lib/nunjucks.js';
 
 declare interface Options {
 	/**
