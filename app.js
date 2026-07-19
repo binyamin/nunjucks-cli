@@ -7,7 +7,6 @@ import { writeFile } from './lib/utils.js';
 export { Nunjucks } from './lib/nunjucks.js';
 
 /**
- *
  * @type {import('./app')['run']}
  */
 export async function run(input, output, options = {}) {

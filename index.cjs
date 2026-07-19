@@ -18,7 +18,8 @@ program
 	.option(
 		'-d, --data <path>',
 		'Path to a json or yaml file',
-		(value, previous) => [...previous, value], [],
+		(value, previous) => [...previous, value],
+		[],
 	);
 
 program.parse();

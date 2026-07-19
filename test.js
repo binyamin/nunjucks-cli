@@ -25,8 +25,7 @@ test.before(() => {
 		},
 		'with-data.njk': 'Hello {{ vars.name }}!',
 		'with-data-kebabcase.njk': 'Hello {{ kebabCase.name }}!',
-		'with-plugins.njk':
-			'Today is {{ "2022-01-01" | date("MMMM Do, YYYY") }}',
+		'with-plugins.njk': 'Today is {{ "2022-01-01" | date("MMMM Do, YYYY") }}',
 		'index-root.njk': '{{ range(5) | join(",") }}',
 	});
 });

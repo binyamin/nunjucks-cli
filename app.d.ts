@@ -2,7 +2,6 @@ import type { Nunjucks } from './lib/nunjucks.js';
 
 declare interface Options {
 	/**
-	 *
 	 * YAML or JSON files containing global data
 	 *
 	 * @default []
@@ -11,7 +10,6 @@ declare interface Options {
 }
 
 /**
- *
  * Mimics the CLI, for testing purposes. You probably want
  * to use the {@link Nunjucks `Nunjucks`} class.
  *
@@ -22,7 +20,7 @@ declare interface Options {
 export function run(
 	input: string,
 	output: string,
-	options?: Options
+	options?: Options,
 ): Promise<void>;
 
 export { Nunjucks } from './lib/nunjucks.js';

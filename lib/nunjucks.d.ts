@@ -8,7 +8,6 @@ export type Filter = (
 ) => any | Promise<any>;
 
 /**
- *
  * Wrapper for [nunjucks](https://mozilla.github.io/nunjucks).
  *
  * Adds a few filters and functions (see `/plugins`)
@@ -17,7 +16,6 @@ export type Filter = (
  */
 export class Nunjucks extends nunjucks.Environment {
 	/**
-	 *
 	 * @param dirs The location(s) of the nunjucks files
 	 * and partials. Passed directly to
 	 * {@link nunjucks.FileSystemLoader `nunjucks.FileSystemLoader`}
@@ -25,7 +23,6 @@ export class Nunjucks extends nunjucks.Environment {
 	constructor(dirs: string | string[]);
 
 	/**
-	 *
 	 * Load global data from a JSON or YAML file.
 	 *
 	 * @param filepath Path to the file
@@ -49,7 +46,6 @@ declare interface Options {
 }
 
 /**
- *
  * Create a new {@link Nunjucks `Nunjucks`} instance, and
  * load the given data-file paths.
  *

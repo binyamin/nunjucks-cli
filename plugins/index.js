@@ -1,5 +1,5 @@
-import { inspect } from 'node:util';
 import process from 'node:process';
+import { inspect } from 'node:util';
 import { date } from './date-filter.js';
 
 export const filters = {
@@ -16,7 +16,6 @@ export const filters = {
 		}));
 	},
 	/**
-	 *
 	 * Turn a number into an ordinal, such as "1" => "1st"
 	 * @param {number} n
 	 * @returns {string}
