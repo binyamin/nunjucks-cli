@@ -3,7 +3,7 @@ import path from 'node:path';
 import test from 'ava';
 import mock from 'mock-fs';
 
-import yaml from 'js-yaml';
+import * as yaml from 'js-yaml';
 
 /*
 	eslint-disable-next-line import/order --

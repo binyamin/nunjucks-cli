@@ -15,6 +15,12 @@ and this project tries to adhere to
 	**Security** in case of vulnerabilities.
 -->
 
+## Unreleased
+
+### Security
+
+- Updated dependencies
+
 ## [0.1.1] - 2022-08-26
 
 ### Fixed

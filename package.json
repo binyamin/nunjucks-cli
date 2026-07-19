@@ -9,7 +9,7 @@
 	"main": "app.js",
 	"types": "./app.d.ts",
 	"engines": {
-		"node": ">=16.8"
+		"node": ">=22"
 	},
 	"publishConfig": {
 		"registry": "https://npm.pkg.github.com"
@@ -28,24 +28,17 @@
 		"test": "ava"
 	},
 	"dependencies": {
-		"camelcase": "^7.0.0",
-		"commander": "^9.4.0",
-		"dayjs": "^1.11.5",
-		"js-yaml": "^4.1.0",
-		"nunjucks": "^3.2.3"
+		"camelcase": "^9.0.0",
+		"commander": "^15.0.0",
+		"dayjs": "^1.11.21",
+		"js-yaml": "^5.2.1",
+		"nunjucks": "^3.2.4"
 	},
 	"devDependencies": {
-		"ava": "^4.3.3",
-		"esbuild": "^0.15.5",
-		"mock-fs": "^5.1.4",
-		"pkg": "^5.8.0",
-		"xo": "^0.52.2"
-	},
-	"pnpm": {
-		"peerDependencyRules": {
-			"ignoreMissing": [
-				"webpack"
-			]
-		}
+		"ava": "^8.0.1",
+		"esbuild": "^0.28.1",
+		"mock-fs": "^5.5.0",
+		"pkg": "^5.8.1",
+		"xo": "^4.0.0"
 	}
 }
