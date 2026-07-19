@@ -26,13 +26,13 @@ export const filters = {
 
 		switch (s.at(-1)) {
 			case '1':
-				return s + 'st';
+				return `${s}st`;
 			case '2':
-				return s + 'nd';
+				return `${s}nd`;
 			case '3':
-				return s + 'rd';
+				return `${s}rd`;
 			default:
-				return s + 'th';
+				return `${s}th`;
 		}
 	},
 	// ==== jinja stuff ====

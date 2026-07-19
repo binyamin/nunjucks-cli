@@ -22,7 +22,7 @@
 	"author": "Binyamin Aron Green (https://binyam.in/)",
 	"license": "MIT",
 	"scripts": {
-		"lint": "xo",
+		"lint": "biome lint",
 		"test": "ava"
 	},
 	"dependencies": {
@@ -33,8 +33,8 @@
 		"nunjucks": "^3.2.4"
 	},
 	"devDependencies": {
+		"@biomejs/biome": "^2.5.4",
 		"ava": "^8.0.1",
-		"mock-fs": "^5.5.0",
-		"xo": "^4.0.0"
+		"mock-fs": "^5.5.0"
 	}
 }
