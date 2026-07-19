@@ -15,7 +15,11 @@ and this project tries to adhere to
 	**Security** in case of vulnerabilities.
 -->
 
-## Unreleased
+## [0.2.0] - 2026-07-19
+
+### Removed
+
+- Remove support for Node.js versions under 22.x
 
 ### Security
 
@@ -47,3 +51,4 @@ and this project tries to adhere to
 
 [0.1.0]: https://github.com/binyamin/nunjucks-cli/releases/tag/v0.1.0
 [0.1.1]: https://github.com/binyamin/nunjucks-cli/releases/tag/v0.1.1
+[0.2.0]: https://github.com/binyamin/nunjucks-cli/releases/tag/v0.2.0

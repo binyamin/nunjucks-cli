@@ -6,7 +6,7 @@ const { program } = require('commander');
 
 program
 	.name('njk')
-	.version('0.1.1', '-v, --version')
+	.version('0.2.0', '-v, --version')
 	.description('A small cli for nunjucks');
 
 program

@@ -1,7 +1,7 @@
 {
 	"name": "@binyamin/njk",
 	"type": "module",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"license": "MIT",
 	"author": "Binyamin Aron Green (https://binyam.in/)",
 	"description": "A small cli for nunjucks",
