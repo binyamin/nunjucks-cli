@@ -17,4 +17,4 @@ All input is welcome; feel free to [open an issue](https://github.com/binyamin/n
 
 ## Legal
 
-All source-code is provided under the terms of [the MIT license](https://github.com/binyamin/nunjucks-cli/blob/main/LICENSE). Copyright 2022 Binyamin Aron Green.
+All source-code is provided under the terms of [the MIT license](https://github.com/binyamin/nunjucks-cli/blob/main/LICENSE). Copyright 2026 Binyamin Aron Green.
